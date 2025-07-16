@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #003b5b; 
+  background-color: #003b5b;
   color: white;
 }
 
@@ -15,12 +15,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
+  flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  padding-left:400px;
+  justify-content: center;
+  flex: 1;
 }
 
 .logo img {
@@ -39,16 +41,20 @@ nav ul {
   list-style: none;
   gap: 50px;
   font-size: 40px;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
-nav ul li a:hover{
-    text-decoration: underline;
+
+nav ul li a:hover {
+  text-decoration: underline;
 }
+
 .donate {
   background-color: red;
   color: white;
@@ -57,7 +63,6 @@ nav ul li a:hover{
   font-weight: bold;
   text-decoration: none;
 }
-
 
 .box {
   background-image: url('https://www.iitg.ac.in/sail/static/media/banner_img.a1a27958329615f787eb.jpeg');
@@ -75,9 +80,8 @@ nav ul li a:hover{
   border-radius: 12px;
   text-align: center;
   width: 100%;
-  max-width: 900px; 
+  max-width: 900px;
 }
-
 
 .center-box h1 {
   margin-bottom: 20px;
@@ -107,79 +111,83 @@ nav ul li a:hover{
   border-radius: 6px;
   cursor: pointer;
 }
-.icons{
-    font-size: 80px;
-    gap: 20px;
+
+.icons {
+  font-size: 80px;
+  gap: 20px;
 }
-.fa-brands.fa-facebook-messenger{
-    color: white;
-}
-.fa-brands.fa-linkedin{
-    color: white;
-}
-.fa-brands.fa-youtube{
-    color:white;
-}
-.fa-brands.fa-instagram{
-    color: white;
+
+.fa-brands.fa-facebook-messenger,
+.fa-brands.fa-linkedin,
+.fa-brands.fa-youtube,
+.fa-brands.fa-instagram {
+  color: white;
 }
 
 footer {
   background-color: #004766;
-  padding: 100px 400px 100px 500px;
+  padding: 100px 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   font-size: 50px;
 }
 
-
 .footer-left img {
   height: 100px;
 }
-.texts{
-    font-size: 80px;
-    gap: 20px;
+
+.texts {
+  font-size: 80px;
+  gap: 20px;
 }
 
 .footer-left h3 {
   margin-top: 20px;
 }
+
 .line {
   width: 4px;
-  background-color: white;  
+  background-color: white;
 }
+
 .footer-center a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
 }
-.footer-center ul{
-    list-style-type:none;
+
+.footer-center ul {
+  list-style-type: none;
 }
+
 .footer-center a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.footer-center, .footer-right {
+.footer-center,
+.footer-right {
   max-width: 800px;
 }
 
-.footer-center h4,.footer-right h4 {
+.footer-center h4,
+.footer-right h4 {
   margin-bottom: 30px;
 }
 
 footer p {
   margin-bottom: 10px;
 }
-.footer-right a{
+
+.footer-right a {
   color: white;
   text-decoration: none;
 }
-.footer-right a:hover{
-    text-decoration: underline;
-    cursor: pointer;
+
+.footer-right a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 footer .copyright {
@@ -191,3 +199,124 @@ footer .copyright {
   font-size: 40px;
 }
 
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .sail-text {
+    font-size: 32px;
+  }
+
+  nav ul {
+    gap: 30px;
+    font-size: 30px;
+  }
+
+  .center-box {
+    padding: 50px;
+    max-width: 90%;
+  }
+
+  .center-box h1 {
+    font-size: 40px;
+  }
+
+  .center-box p {
+    font-size: 20px;
+  }
+
+  .center-box input {
+    font-size: 20px;
+  }
+
+  .center-box button {
+    font-size: 24px;
+  }
+
+  footer {
+    padding: 60px 40px;
+    font-size: 36px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left img {
+    height: 80px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .texts {
+    font-size: 40px;
+  }
+
+  .icons {
+    font-size: 50px;
+  }
+
+  footer .copyright {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+  }
+
+  .sail-text {
+    font-size: 24px;
+  }
+
+  .center-box h1 {
+    font-size: 28px;
+  }
+
+  .center-box p {
+    font-size: 16px;
+  }
+
+  .center-box input {
+    font-size: 16px;
+  }
+
+  .center-box button {
+    font-size: 18px;
+  }
+
+  .icons {
+    font-size: 32px;
+  }
+
+  .texts {
+    font-size: 24px;
+  }
+
+  footer {
+    padding: 40px 20px;
+    font-size: 20px;
+  }
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 20px;
+  }
+
+  footer .copyright {
+    font-size: 18px;
+  }
+}
