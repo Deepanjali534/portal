@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Professors</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="sail_ logo.png" alt="SAIL Logo">
+     <span class="sail-text">SAIL</span>
+    </div>
+    <nav>
+     <ul>
+        <li><a href="https://www.iitg.ac.in/sail/" target="_blank">Home</a></li>
+        <li><a href="https://www.iitg.ac.in/sail/about" target="_blank">About Us</a></li>
+         <li><a href="https://www.iitg.ac.in/aer/donation.php" target="_blank" class="donate">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="box">
+  <section class="main">
+    <div class="search">
+      <input type="text" placeholder="Search by Name...">
+      <select>
+        <option>Select Department</option>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>ME</option>
+        <option>DSAI</option>
+        <option>CE</option>
+        <option>CL</option>
+        <option>BT</option>
+        <option>MNC</option>
+        <option>PHYSICS</option>
+       <option>CHEMISTRY</option>
+        <option>EEE</option>
+        <option>EP</option>
+      </select>
+      <button onclick="goTONext()">Search</button>
+    </div> 
+
+    <div class="professors">
+      <div class="prof-card" onclick="profCardNext()">
+        <img src="prof1.jpeg" alt="Prof 1">
+        <div>
+          <h3>Prof.1</h3>
+          <p>Professor&Head</p>
+          <p>✉ prof1@iitg.ac.in</p>
+          <p>☎ +91 5678901234</p>
+        </div>
+      </div>
+
+      <div class="prof-card"onclick="profCardNext()">
+        <img src="prof2.jpeg" alt="Prof 2">
+        <div>
+          <h3>Prof.2</h3>
+          <p>Professor&Head</p>
+          <p>✉ prof2@iitg.ac.in</p>
+          <p>☎ +91 5678901234 </p>
+        </div>
+      </div>
+
+      <div class="prof-card"onclick="profCardNext()">
+        <img src="prof3.webp" alt="Prof 3">
+        <div>
+          <h3>Prof.3</h3>
+          <p>Professor</p>
+          <p>✉ prof3@iitg.ac.in</p>
+          <p>☎ +91  5678901234 </p>
+        </div>
+      </div>
+
+      <div class="prof-card"onclick="profCardNext()">
+        <img src="prof4.jpeg" alt="Prof 4">
+        <div>
+          <h3>Prof.4</h3>
+          <p>Professor</p>
+          <p>✉ prof4@iitg.ac.in</p>
+          <p>☎ +91  5678901234</p>
+        </div>
+      </div>
+    </div>
+</div>
+  </section>
+ <footer>
+    <div class="footer-left">
+      <img src="sail_ logo.png" alt="SAIL Logo">
+      <span class="texts">SAIL</span>
+      <h3>Student Alumni<br>Interaction Linkage</h3>
+      <br>
+      <div class="icons">
+<a href="https://www.instagram.com/sail_iitg" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.youtube.com/@IITGuwahatiSAIL"target="_blank"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.linkedin.com/company/sail-iitg/"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://www.facebook.com/sail.iitg/"target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+ </div>
+ </div>
+ <div class="line"></div>
+    <div class="footer-center">
+      <h4>Learn More</h4>
+      <ul>
+      <li><a href="https://www.iitg.ac.in/aer/"target="_blank">Alumni & External Relations</a></li>
+      <li><a href="https://www.iitg.ac.in/"target="_blank">IIT Guwahati</a></li>
+      <li><a href="https://www.iitg.ac.in/sail/about" target="_blank">About Us</a></li> 
+    </ul>
+    </div>
+    <div class="footer-right">
+      <h4>Contact Us</h4>
+      <p>Call us:</p>
+      <p><a href="tel:+917020996986">+91-7020996986</a></p>
+      <p><a href="tel:+917060107025">+91-7060107025</a></p>
+      <p>Email us: <a href="mailto:SAIL@iitg.ac.in">SAIL@iitg.ac.in</a></p>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 SAIL All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+</html>

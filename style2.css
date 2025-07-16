@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #003b5b; 
+  color: white;
+}
+.box {
+  background-image: url('https://www.iitg.ac.in/sail/static/media/banner_img.a1a27958329615f787eb.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  background-color: #003b5b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left:400px;
+}
+
+.logo img {
+  height: 70px;
+  margin-right: 15px;
+}
+
+.sail-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  font-size: 40px;
+
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+.donate {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+.main {
+  padding: 60px 40px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap:30px;
+}
+
+.search input,
+.search select {
+  padding:5px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search button {
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.professors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.prof-card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 22px;
+}
+
+.prof-card img {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.icons{
+    font-size: 80px;
+    gap: 20px;
+}
+.fa-brands.fa-facebook-messenger{
+    color: white;
+}
+.fa-brands.fa-linkedin{
+    color: white;
+}
+.fa-brands.fa-youtube{
+    color:white;
+}
+.fa-brands.fa-instagram{
+    color: white;
+}
+
+footer {
+  background-color: #004766;
+  padding: 100px 400px 100px 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 50px;
+}
+
+
+.footer-left img {
+  height: 100px;
+}
+.texts{
+    font-size: 80px;
+    gap: 20px;
+}
+
+.footer-left h3 {
+  margin-top: 20px;
+}
+.line {
+  width: 4px;
+  background-color: white;  
+}
+.footer-center a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-center ul{
+    list-style-type:none;
+}
+.footer-center a:hover {
+  text-decoration: underline; 
+  cursor: pointer;
+}
+
+.footer-center, .footer-right {
+  max-width: 800px;
+}
+
+.footer-center h4,.footer-right h4 {
+  margin-bottom: 30px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+.footer-right a{
+  color: white;
+  text-decoration: none;
+}
+.footer-right a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 40px;
+}
+
