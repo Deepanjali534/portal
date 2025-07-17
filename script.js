@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // For index.html
   const nameInput = document.getElementById("nameInput");
-  const continueBtn = document.getElementById("goBtn");
+  const continueBtn = document.getElementById("btun");
   if (nameInput && continueBtn) {
     continueBtn.addEventListener("click", goToPage);
   }
