@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
-
-    // INDEX.HTML LOGIC
-    if (path.includes('index.html') || path.endsWith('/portal/') || path.endsWith('/portal')) {
+    if (path.includes('portal')  {
         const continueBtn = document.getElementById('btun');
         const nameInput = document.getElementById('nameInput');
 
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // CHOSEN PROF
     if (path.includes('chosenprof.html')) {
         const searchBtn = document.getElementById('searchBtn');
         const searchInput = document.getElementById('searchInput');
@@ -46,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // TESTIMONIAL PAGE
     if (path.includes('testimonial.html')) {
         const submitBtn = document.getElementById('bob');
         const testimonialInput = document.getElementById('testimonialInput');
@@ -62,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-
-    // THANKYOU PAGE
     if (path.includes('thankyou.html')) {
         const restartBtn = document.getElementById('bob');
         if (restartBtn) {
