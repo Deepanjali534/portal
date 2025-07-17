@@ -10,7 +10,8 @@ function goToPage() {
     localStorage.setItem("userName", name);
     window.location.href = "chosenprof.html";
 
-  } else if (currentPage.includes("testimonial.html")) {
+  }
+  else if (currentPage.includes("testimonial.html")) {
     const testimonial = document.getElementById("testimonialInput").value.trim();
     if (testimonial === "") {
       alert("Please write your testimonial");
@@ -19,7 +20,7 @@ function goToPage() {
     localStorage.setItem("testimonial", testimonial);
     window.location.href = "thankyou.html";
   }
-}
+
 
 function searchProfile() {
   const input = document.getElementById("searchInput").value.trim().toLowerCase();
