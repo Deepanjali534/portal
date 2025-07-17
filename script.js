@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
-    if (path.includes('portal')  {
+    if (path.includes('index.html') || path.endsWith('/portal/') || path.endsWith('/portal'))
+  {
         const continueBtn = document.getElementById('btun');
         const nameInput = document.getElementById('nameInput');
 
