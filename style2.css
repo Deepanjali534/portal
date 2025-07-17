@@ -308,11 +308,11 @@ footer .copyright {
   }
 
   .prof-card {
-    font-size: 18px;
+    font-size: 10px;
   }
   .prof-card img {
-    width: 80%;
-    height: auto;
+    width: 80px;
+    height: 100px;
   }
 
   .icons {
