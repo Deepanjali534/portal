@@ -310,6 +310,10 @@ footer .copyright {
   .prof-card {
     font-size: 18px;
   }
+  .prof-card img {
+    width: 80%;
+    height: auto;
+  }
 
   .icons {
     font-size: 32px;
@@ -326,7 +330,7 @@ footer .copyright {
 
   .footer-center h4,
   .footer-right h4 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   footer .copyright {
