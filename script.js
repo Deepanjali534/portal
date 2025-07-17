@@ -1,45 +1,51 @@
 function goTONext() {
-    const currentPage = window.location.pathname;
+  const currentPage = window.location.pathname.toLowerCase();
 
-    if (currentPage.includes("index.html")) {
-        const nameInput = document.querySelector('input[type="text"]').value.trim();
-        if (nameInput === "") {
-            alert("Please enter your name before continuing!");
-            return;
-        }
-        window.location.href = "chosenprof.html";
+  if (currentPage.includes("index.html")) {
+    const name = document.getElementById("nameInput").value.trim();
+    if (name === "") {
+      alert("Please enter your name");
+      return;
     }
+    localStorage.setItem("userName", name);
+    window.location.href = "chosenprof.html";
 
-    else if (currentPage.includes("chosenprof.html")) {
-        const searchInput = document.querySelector('.search input[type="text"]').value.trim().toLowerCase();
-        const validProfs = ["prof1", "prof2", "prof3", "prof4"];
-
-        if (searchInput === "") {
-            alert("Please enter a professor name.");
-            return;
-        }
-
-        if (validProfs.includes(searchInput)) {
-            window.location.href = "testimonial.html";
-        } else {
-            alert("Professor Not Found!");
-        }
+  } else if (currentPage.includes("testimonial.html")) {
+    const testimonial = document.getElementById("testimonialInput").value.trim();
+    if (testimonial === "") {
+      alert("Please write your testimonial");
+      return;
     }
-
-    else if (currentPage.includes("testimonial.html")) {
-        const testimonialInput = document.querySelector('#testimonial').value.trim();
-        if (testimonialInput === "") {
-            alert("Please write something before submitting!");
-            return;
-        }
-        window.location.href = "thankyou.html";
-    }
+    localStorage.setItem("testimonial", testimonial);
+    window.location.href = "thankyou.html";
+  }
 }
 
-function profCardNext() {
-    window.location.href = "testimonial.html";
+function searchProfile() {
+  const input = document.getElementById("searchInput").value.trim().toLowerCase();
+
+  if (input === "") {
+    alert("Please enter a profile name.");
+    return;
+  }
+
+  const validProfiles = ["prof 1", "prof 2", "prof 3", "prof 4"];
+  if (!validProfiles.includes(input)) {
+    alert("No match found.");
+    return;
+  }
+
+  localStorage.setItem("profile", input);
+  window.location.href = "testimonial.html";
+}
+
+function profCardNext(profileName) {
+  localStorage.setItem("profile", profileName);
+  window.location.href = "testimonial.html";
 }
 
 function restart() {
-    window.location.href = "index.html";
+  localStorage.clear();
+  window.location.href = "index.html";
 }
+
