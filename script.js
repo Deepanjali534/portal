@@ -1,4 +1,4 @@
-function goTONext() {
+function goToPage() {
   const currentPage = window.location.pathname.toLowerCase();
 
   if (currentPage.includes("index.html")) {
