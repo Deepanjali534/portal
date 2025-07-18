@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
-
     if (path.includes('index.html') || path.endsWith('/portal/') || path.endsWith('/portal')) {
         const continueBtn = document.getElementById('btun');
         const nameInput = document.getElementById('nameInput');
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (path.includes('chosenprof.html')) {
         const searchBtn = document.getElementById('searchBtn');
         const searchInput = document.getElementById('searchInput');
+        const deptSelect = document.getElementById('deptSelect');
         const profCards = document.querySelectorAll('.prof-card');
 
         const deptToProf = {
@@ -28,27 +28,31 @@ document.addEventListener('DOMContentLoaded', function() {
             'ece': 'prof 3',
             'cl': 'prof 4',
             'ce': 'prof 1',
-            'bt': 'prof 3', 
+            'bt': 'prof 3',
             'dsai': 'prof 1',
-            'eee': 'prof 2',
-            'mnc': 'prof 2',
-            'chemistry': 'prof 4',
-            'ep': 'prof 3',
         };
+
+        if (deptSelect) {
+            deptSelect.addEventListener('change', function() {
+                const dept = deptSelect.value.toLowerCase();
+                if (dept && deptToProf[dept]) {
+                    searchInput.value = deptToProf[dept];
+                } else {
+                    searchInput.value = "";
+                }
+            });
+        }
 
         if (searchBtn) {
             searchBtn.addEventListener('click', function() {
                 const input = searchInput.value.trim().toLowerCase();
 
                 if (input === "") {
-                    alert("Please write professor or department name");
+                    alert("Please write professor or select department");
                     return;
                 }
 
                 if (["prof 1", "prof 2", "prof 3", "prof 4"].includes(input)) {
-                    window.location.href = "testimonial.html";
-                } else if (deptToProf[input]) {
-                    alert(`Department found: ${input.toUpperCase()}, matched to ${deptToProf[input]}`);
                     window.location.href = "testimonial.html";
                 } else {
                     alert("No match found");
@@ -64,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-
     if (path.includes('testimonial.html')) {
         const submitBtn = document.getElementById('bob');
         const testimonialInput = document.getElementById('testimonialInput');
