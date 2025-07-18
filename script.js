@@ -21,6 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchBtn = document.getElementById('searchBtn');
         const searchInput = document.getElementById('searchInput');
         const profCards = document.querySelectorAll('.prof-card');
+        const deptToProf = {
+        'CSE': 'prof 1',
+        'ME': 'prof 2',
+        'ECE': 'prof 3',
+        'CL': 'prof 4',
+        'CE': 'prof 1',
+        'BT': 'prof 3', 
+        'DSAI': 'prof 1',
+        'EEE': 'prof 2',
+        'MNC': 'prof 2',    
+    };
+
 
         if (searchBtn) {
             searchBtn.addEventListener('click', function() {
@@ -32,6 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     alert("No match found");
                 }
+                if (deptToProf[input]) {
+                    alert(` Department found: ${input.toUpperCase()}, matched to ${deptToProf[input]}`);
+                }
+                window.location.href = "testimonial.html";
+            } else {
+                alert("No match found");
+            }
+        });
+    }
+
             });
         }
 
