@@ -298,22 +298,70 @@ footer .copyright {
     font-size: 28px;
   }
 
+.logo img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.sail-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.donate {
+  background-color: red;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+  .search {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
   .search input,
   .search select {
+    width: 100%;
     font-size: 16px;
+    padding: 8px;
   }
 
   .search button {
+    width: 100%;
     font-size: 18px;
+    padding: 10px;
+  }
+
+  .professors {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .prof-card {
-    font-size: 10px;
+    width: 90%;
+    max-width: 300px;
+    font-size: 14px;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
   }
+
   .prof-card img {
-    width: 80px;
-    height: 100px;
+    width: 100px;
+    height: 120px;
   }
+
 
   .icons {
     font-size: 32px;
