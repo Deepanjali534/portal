@@ -25,20 +25,15 @@
   <section class="main">
     <div class="search">
       <input type="text" id="searchInput" placeholder="Search by Name...">
-      <select>
-        <option>Select Department</option>
-        <option>CSE</option>
-        <option>ECE</option>
-        <option>ME</option>
-        <option>DSAI</option>
-        <option>CE</option>
-        <option>CL</option>
-        <option>BT</option>
-        <option>MNC</option>
-        <option>PHYSICS</option>
-       <option>CHEMISTRY</option>
-        <option>EEE</option>
-        <option>EP</option>
+      <select id="deptSelect">
+        <option value="">Select Department</option>
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+        <option value="me">ME</option>
+        <option value="dsai">DSAI</option>
+        <option value="ce">CE</option>
+        <option value="cl">CL</option>
+        <option value="bt">BT</option>
       </select>
       <button  id="searchBtn" onclick="searchProfile()">Search</button>
     </div> 
