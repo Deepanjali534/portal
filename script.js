@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
-    if (path.includes('index.html') || path.endsWith('/portal/') || path.endsWith('/portal'))
-  {
+
+    if (path.includes('index.html') || path.endsWith('/portal/') || path.endsWith('/portal')) {
         const continueBtn = document.getElementById('btun');
         const nameInput = document.getElementById('nameInput');
 
@@ -21,39 +21,38 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchBtn = document.getElementById('searchBtn');
         const searchInput = document.getElementById('searchInput');
         const profCards = document.querySelectorAll('.prof-card');
-        const deptToProf = {
-        'CSE': 'prof 1',
-        'ME': 'prof 2',
-        'ECE': 'prof 3',
-        'CL': 'prof 4',
-        'CE': 'prof 1',
-        'BT': 'prof 3', 
-        'DSAI': 'prof 1',
-        'EEE': 'prof 2',
-        'MNC': 'prof 2',    
-    };
 
+        const deptToProf = {
+            'cse': 'prof 1',
+            'me': 'prof 2',
+            'ece': 'prof 3',
+            'cl': 'prof 4',
+            'ce': 'prof 1',
+            'bt': 'prof 3', 
+            'dsai': 'prof 1',
+            'eee': 'prof 2',
+            'mnc': 'prof 2',
+            'chemistry': 'prof 4',
+            'ep': 'prof 3',
+        };
 
         if (searchBtn) {
             searchBtn.addEventListener('click', function() {
                 const input = searchInput.value.trim().toLowerCase();
+
                 if (input === "") {
-                    alert("Please write professor name");
-                } else if (["prof 1", "prof 2", "prof 3", "prof 4"].includes(input)) {
+                    alert("Please write professor or department name");
+                    return;
+                }
+
+                if (["prof 1", "prof 2", "prof 3", "prof 4"].includes(input)) {
+                    window.location.href = "testimonial.html";
+                } else if (deptToProf[input]) {
+                    alert(`Department found: ${input.toUpperCase()}, matched to ${deptToProf[input]}`);
                     window.location.href = "testimonial.html";
                 } else {
                     alert("No match found");
                 }
-                if (deptToProf[input]) {
-                    alert(` Department found: ${input.toUpperCase()}, matched to ${deptToProf[input]}`);
-                }
-                window.location.href = "testimonial.html";
-            } else {
-                alert("No match found");
-            }
-        });
-    }
-
             });
         }
 
@@ -81,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
     if (path.includes('thankyou.html')) {
         const restartBtn = document.getElementById('bob');
         if (restartBtn) {
@@ -90,4 +90,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
 
